@@ -1,0 +1,109 @@
+﻿<Window x:Class="Calculator_design.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_design"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="300">
+    <TabControl>
+        <TabItem>
+            <TabItem.Header>
+                <StackPanel>
+                    <Ellipse Height="10" Width="10" Fill="Black"/>
+                    <TextBlock Margin="3">Standart</TextBlock>
+                </StackPanel>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid Background="#d4d4d4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="50" FontFamily="Calibri Bold" TextAlignment="Right" VerticalAlignment="Bottom">0</TextBlock>
+
+                    <Button Grid.Row="1" Grid.Column="0" Background="#edebeb">%</Button>
+                    <Button Grid.Row="1" Grid.Column="1" Background="#edebeb">CE</Button>
+                    <Button Grid.Row="1" Grid.Column="2" Background="#edebeb">C</Button>
+                    <Button Grid.Row="1" Grid.Column="3" Background="#edebeb">Backspace</Button>
+
+                    <Button Grid.Row="2" Grid.Column="0" Background="#edebeb">1/x</Button>
+                    <Button Grid.Row="2" Grid.Column="1" Background="#edebeb">x^2</Button>
+                    <Button Grid.Row="2" Grid.Column="2" Background="#edebeb">sqrt(x)</Button>
+                    <Button Grid.Row="2" Grid.Column="3" Background="#edebeb">/</Button>
+
+                    <Button Grid.Row="3" Grid.Column="0" Background="#ffffff">7</Button>
+                    <Button Grid.Row="3" Grid.Column="1" Background="#ffffff">8</Button>
+                    <Button Grid.Row="3" Grid.Column="2" Background="#ffffff">9</Button>
+                    <Button Grid.Row="3" Grid.Column="3" Background="#edebeb">*</Button>
+
+                    <Button Grid.Row="4" Grid.Column="0" Background="#ffffff">4</Button>
+                    <Button Grid.Row="4" Grid.Column="1" Background="#ffffff">5</Button>
+                    <Button Grid.Row="4" Grid.Column="2" Background="#ffffff">6</Button>
+                    <Button Grid.Row="4" Grid.Column="3" Background="#edebeb">-</Button>
+
+                    <Button Grid.Row="5" Grid.Column="0" Background="#ffffff">1</Button>
+                    <Button Grid.Row="5" Grid.Column="1" Background="#ffffff">2</Button>
+                    <Button Grid.Row="5" Grid.Column="2" Background="#ffffff">3</Button>
+                    <Button Grid.Row="5" Grid.Column="3" Background="#edebeb">+</Button>
+
+                    <Button Grid.Row="6" Grid.Column="0" Background="#ffffff">+/-</Button>
+                    <Button Grid.Row="6" Grid.Column="1" Background="#ffffff">0</Button>
+                    <Button Grid.Row="6" Grid.Column="2" Background="#ffffff">.</Button>
+                    <Button Grid.Row="6" Grid.Column="3" Background="#e3ae0e">=</Button>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem>
+            <TabItem.Header>
+                <StackPanel>
+                    <Ellipse Height="10" Width="10" Fill="Green"/>
+                    <TextBlock Margin="3">Exchange</TextBlock>
+                </StackPanel>
+            </TabItem.Header>
+            <TabItem.Content>
+                <Grid Background="#d4d4d4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Grid.ColumnSpan="3" Grid.RowSpan="2">
+                        <ComboBoxItem >UAH</ComboBoxItem>
+                        <ComboBoxItem >EUR</ComboBoxItem>
+                        <ComboBoxItem IsSelected="True">USD</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2">
+                        <ComboBoxItem  IsSelected="True">UAH</ComboBoxItem>
+                        <ComboBoxItem>EUR</ComboBoxItem>
+                        <ComboBoxItem>USD</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock Grid.Row="2" Grid.ColumnSpan="6">Exchanged(here must be updated calculations)</TextBlock>
+                </Grid>
+             </TabItem.Content>
+        </TabItem>
+    </TabControl>
+</Window>
