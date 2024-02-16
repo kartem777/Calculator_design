@@ -15,8 +15,9 @@
                 </StackPanel>
             </TabItem.Header>
             <TabItem.Content>
-                <Grid Background="#d4d4d4">
+                <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
                         <RowDefinition Height="3*" />
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
@@ -31,37 +32,40 @@
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="50" FontFamily="Calibri Bold" TextAlignment="Right" VerticalAlignment="Bottom">0</TextBlock>
 
-                    <Button Grid.Row="1" Grid.Column="0" Background="#edebeb">%</Button>
-                    <Button Grid.Row="1" Grid.Column="1" Background="#edebeb">CE</Button>
-                    <Button Grid.Row="1" Grid.Column="2" Background="#edebeb">C</Button>
-                    <Button Grid.Row="1" Grid.Column="3" Background="#edebeb">Backspace</Button>
+                    <ComboBox x:Name="styleBox" Grid.ColumnSpan="4"/>
 
-                    <Button Grid.Row="2" Grid.Column="0" Background="#edebeb">1/x</Button>
-                    <Button Grid.Row="2" Grid.Column="1" Background="#edebeb">x^2</Button>
-                    <Button Grid.Row="2" Grid.Column="2" Background="#edebeb">sqrt(x)</Button>
-                    <Button Grid.Row="2" Grid.Column="3" Background="#edebeb">/</Button>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" Style="{DynamicResource TextBlockStyle}" FontSize="50" FontFamily="Calibri Bold" TextAlignment="Right" VerticalAlignment="Bottom">0</TextBlock>
 
-                    <Button Grid.Row="3" Grid.Column="0" Background="#ffffff">7</Button>
-                    <Button Grid.Row="3" Grid.Column="1" Background="#ffffff">8</Button>
-                    <Button Grid.Row="3" Grid.Column="2" Background="#ffffff">9</Button>
-                    <Button Grid.Row="3" Grid.Column="3" Background="#edebeb">*</Button>
+                    <Button Grid.Row="2" Grid.Column="0" Style="{DynamicResource ButtonStyle1}">%</Button>
+                    <Button Grid.Row="2" Grid.Column="1" Style="{DynamicResource ButtonStyle}">CE</Button>
+                    <Button Grid.Row="2" Grid.Column="2" Style="{DynamicResource ButtonStyle}">C</Button>
+                    <Button Grid.Row="2" Grid.Column="3" Style="{DynamicResource ButtonStyle}">Back</Button>
 
-                    <Button Grid.Row="4" Grid.Column="0" Background="#ffffff">4</Button>
-                    <Button Grid.Row="4" Grid.Column="1" Background="#ffffff">5</Button>
-                    <Button Grid.Row="4" Grid.Column="2" Background="#ffffff">6</Button>
-                    <Button Grid.Row="4" Grid.Column="3" Background="#edebeb">-</Button>
+                    <Button Grid.Row="3" Grid.Column="0" Style="{DynamicResource ButtonStyle1}">1/x</Button>
+                    <Button Grid.Row="3" Grid.Column="1" Style="{DynamicResource ButtonStyle1}">x^2</Button>
+                    <Button Grid.Row="3" Grid.Column="2" Style="{DynamicResource ButtonStyle1}">sqrt(x)</Button>
+                    <Button Grid.Row="3" Grid.Column="3" Style="{DynamicResource ButtonStyle1}">/</Button>
 
-                    <Button Grid.Row="5" Grid.Column="0" Background="#ffffff">1</Button>
-                    <Button Grid.Row="5" Grid.Column="1" Background="#ffffff">2</Button>
-                    <Button Grid.Row="5" Grid.Column="2" Background="#ffffff">3</Button>
-                    <Button Grid.Row="5" Grid.Column="3" Background="#edebeb">+</Button>
+                    <Button Grid.Row="4" Grid.Column="0" Style="{DynamicResource ButtonStyle2}">7</Button>
+                    <Button Grid.Row="4" Grid.Column="1" Style="{DynamicResource ButtonStyle2}">8</Button>
+                    <Button Grid.Row="4" Grid.Column="2" Style="{DynamicResource ButtonStyle2}">9</Button>
+                    <Button Grid.Row="4" Grid.Column="3" Style="{DynamicResource ButtonStyle1}">*</Button>
 
-                    <Button Grid.Row="6" Grid.Column="0" Background="#ffffff">+/-</Button>
-                    <Button Grid.Row="6" Grid.Column="1" Background="#ffffff">0</Button>
-                    <Button Grid.Row="6" Grid.Column="2" Background="#ffffff">.</Button>
-                    <Button Grid.Row="6" Grid.Column="3" Background="#e3ae0e">=</Button>
+                    <Button Grid.Row="5" Grid.Column="0" Style="{DynamicResource ButtonStyle2}">4</Button>
+                    <Button Grid.Row="5" Grid.Column="1" Style="{DynamicResource ButtonStyle2}">5</Button>
+                    <Button Grid.Row="5" Grid.Column="2" Style="{DynamicResource ButtonStyle2}">6</Button>
+                    <Button Grid.Row="5" Grid.Column="3" Style="{DynamicResource ButtonStyle1}">-</Button>
+
+                    <Button Grid.Row="6" Grid.Column="0" Style="{DynamicResource ButtonStyle2}">1</Button>
+                    <Button Grid.Row="6" Grid.Column="1" Style="{DynamicResource ButtonStyle2}">2</Button>
+                    <Button Grid.Row="6" Grid.Column="2" Style="{DynamicResource ButtonStyle2}">3</Button>
+                    <Button Grid.Row="6" Grid.Column="3" Style="{DynamicResource ButtonStyle1}">+</Button>
+
+                    <Button Grid.Row="7" Grid.Column="0" Style="{DynamicResource ButtonStyle2}">+/-</Button>
+                    <Button Grid.Row="7" Grid.Column="1" Style="{DynamicResource ButtonStyle2}">0</Button>
+                    <Button Grid.Row="7" Grid.Column="2" Style="{DynamicResource ButtonStyle2}">.</Button>
+                    <Button Grid.Row="7" Grid.Column="3" Background="#e3ae0e">=</Button>
                 </Grid>
             </TabItem.Content>
         </TabItem>
